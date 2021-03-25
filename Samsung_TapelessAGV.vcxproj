@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{84300B87-E918-4A02-918D-BD916A0979E5}</ProjectGuid>
+    <RootNamespace>Samsung_TapelessAGV</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./extrainclude/sensor/laser;./extrainclude/newmat;./extrainclude/mswu;./extrainclude/include;./extrainclude/opencv;./extrainclude/sensor/kinect;./extrainclude/sensor/gyro;./extrainclude;./extrainclude/FlyCapture;./extrainclude/sensor/kinect_v1</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>.\lib\Debug;.\extralibs\win32\opencv\Debug;.\extralibs\win32\sensor\gyro\Debug;.\extralibs\win32\sensor\kinect;.\extralibs\win32\sensor\laser\Debug;.\extralibs\win32\glut;.\extralibs\win32\newmat\Debug;.\extralibs\win32\FlyCapture;.\extralibs\win32\kinect_v1;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core240d.lib;opencv_highgui240d.lib;opencv_ml240d.lib		;opencv_video240d.lib	;opencv_flann240d.lib;opencv_imgproc240d.lib;opencv_objdetect240d.lib;opencv_photo240d.lib;opencv_nonfree240d.lib;opencv_features2d240d.lib;opencv_calib3d240d.lib;opencv_legacy240d.lib;opencv_contrib240d.lib;opencv_stitching240d.lib;opencv_videostab240d.lib;openNI.lib;urgd.lib;glfwVC6d.lib;glut32.lib;newmat10d.lib;GLAUX.LIB;FlyCapture2_v100.lib;Kinect10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./extrainclude/sensor/laser;./extrainclude/newmat;./extrainclude/mswu;./extrainclude/include;./extrainclude/opencv;./extrainclude/sensor/kinect;./extrainclude/sensor/gyro;./extrainclude;./extrainclude/FlyCapture;./extrainclude/sensor/kinect_v1</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>.\extralibs\win32\opencv\Release;.\extralibs\win32\sensor\kinect;.\extralibs\win32\sensor\laser\Release;.\extralibs\win32\sensor\gyro\Release;.\extralibs\win32\glut;.\extralibs\win32\newmat\Release;.\lib\Release;.\extralibs\win32\FlyCapture;.\extralibs\win32\kinect_v1;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core240.lib;opencv_highgui240.lib;opencv_ml240.lib		;opencv_video240.lib	;opencv_flann240.lib;opencv_imgproc240.lib;opencv_objdetect240.lib;opencv_photo240.lib;opencv_nonfree240.lib;opencv_features2d240.lib;opencv_calib3d240.lib;opencv_legacy240.lib;opencv_contrib240.lib;opencv_stitching240.lib;opencv_videostab240.lib;openNI.lib;urg.lib;glfwVC6.lib;newmat10.lib;GLAUX.LIB;FlyCapture2_v100.lib;Kinect10.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ini\KUNS.ini" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\bitmap1.bmp" />
+    <None Include="res\bitmap2.bmp" />
+    <None Include="res\bitmap3.bmp" />
+    <None Include="res\bitmap4.bmp" />
+    <None Include="res\PathBlock0.bmp" />
+    <None Include="res\PathBlock1.bmp" />
+    <None Include="res\PathBlock10.bmp" />
+    <None Include="res\PathBlock11.bmp" />
+    <None Include="res\PathBlock12.bmp" />
+    <None Include="res\PathBlock13.bmp" />
+    <None Include="res\PathBlock14.bmp" />
+    <None Include="res\PathBlock15.bmp" />
+    <None Include="res\PathBlock16.bmp" />
+    <None Include="res\PathBlock17.bmp" />
+    <None Include="res\PathBlock18.bmp" />
+    <None Include="res\PathBlock19.bmp" />
+    <None Include="res\PathBlock2.bmp" />
+    <None Include="res\PathBlock20.bmp" />
+    <None Include="res\PathBlock21.bmp" />
+    <None Include="res\PathBlock22.bmp" />
+    <None Include="res\PathBlock23.bmp" />
+    <None Include="res\PathBlock24.bmp" />
+    <None Include="res\PathBlock25.bmp" />
+    <None Include="res\PathBlock26.bmp" />
+    <None Include="res\PathBlock27.bmp" />
+    <None Include="res\PathBlock28.bmp" />
+    <None Include="res\PathBlock29.bmp" />
+    <None Include="res\PathBlock3.bmp" />
+    <None Include="res\PathBlock30.bmp" />
+    <None Include="res\PathBlock31.bmp" />
+    <None Include="res\PathBlock32.bmp" />
+    <None Include="res\PathBlock33.bmp" />
+    <None Include="res\PathBlock34.bmp" />
+    <None Include="res\PathBlock35.bmp" />
+    <None Include="res\PathBlock36.bmp" />
+    <None Include="res\PathBlock37.bmp" />
+    <None Include="res\PathBlock38.bmp" />
+    <None Include="res\PathBlock39.bmp" />
+    <None Include="res\PathBlock4.bmp" />
+    <None Include="res\PathBlock40.bmp" />
+    <None Include="res\PathBlock41.bmp" />
+    <None Include="res\PathBlock42.bmp" />
+    <None Include="res\PathBlock43.bmp" />
+    <None Include="res\PathBlock5.bmp" />
+    <None Include="res\PathBlock6.bmp" />
+    <None Include="res\PathBlock7.bmp" />
+    <None Include="res\PathBlock8.bmp" />
+    <None Include="res\PathBlock9.bmp" />
+    <None Include="res\Samsung_TapelessAGV.ico" />
+    <None Include="res\Samsung_TapelessAGV.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Samsung_TapelessAGV.h" />
+    <ClInclude Include="Samsung_TapelessAGVDlg.h" />
+    <ClInclude Include="src\AGVComm\AGVCommSupervisor.h" />
+    <ClInclude Include="src\AGVComm\GPIOComm\GPIOComm.h" />
+    <ClInclude Include="src\AGVComm\ZigbeeComm\ZigbeeComm.h" />
+    <ClInclude Include="src\Algorithm\FeatureDetector\FDResult.h" />
+    <ClInclude Include="src\Algorithm\FeatureDetector\FeatureDetector.h" />
+    <ClInclude Include="src\Algorithm\FeatureDetector\freak.h" />
+    <ClInclude Include="src\Algorithm\FeatureDetector\hammingseg.h" />
+    <ClInclude Include="src\Algorithm\FeatureDetector\harrisDetector.h" />
+    <ClInclude Include="src\Algorithm\FiducialMarkRecognizer\ALRecognizer.h" />
+    <ClInclude Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\default_trees.h" />
+    <ClInclude Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\fidtrackfinder.h" />
+    <ClInclude Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\fidtrackX.h" />
+    <ClInclude Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\FiducialObject.h" />
+    <ClInclude Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\floatpoint.h" />
+    <ClInclude Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\FrameThresholder.h" />
+    <ClInclude Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\segment.h" />
+    <ClInclude Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\threshold.h" />
+    <ClInclude Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\tiled_bernsen_threshold.h" />
+    <ClInclude Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\treeidmap.h" />
+    <ClInclude Include="src\Algorithm\KuICP\KuICP.h" />
+    <ClInclude Include="src\Algorithm\LineDetector\LDResult.h" />
+    <ClInclude Include="src\Algorithm\ParticleFilter\CeilingImagebasedParticleFilter.h" />
+    <ClInclude Include="src\Algorithm\ParticleFilter\ImagebasedParticleFilter .h" />
+    <ClInclude Include="src\Algorithm\ParticleFilter\LaserBasedParticleFilter.h" />
+    <ClInclude Include="src\Algorithm\ParticleFilter\Sample.h" />
+    <ClInclude Include="src\Algorithm\PathBlock\PathBlock.h" />
+    <ClInclude Include="src\ANSCommon\ANSArray2D.hpp" />
+    <ClInclude Include="src\ANSCommon\ANSCommon.h" />
+    <ClInclude Include="src\ANSCommon\ANSLog.h" />
+    <ClInclude Include="src\ANSCommon\ANSPoint2D.h" />
+    <ClInclude Include="src\ANSCommon\ANSPoint3D.h" />
+    <ClInclude Include="src\ANSCommon\ANSPose.h" />
+    <ClInclude Include="src\KUNSBehavior\GlobalLocalizationBehavior\GlobalLocalizationBehavior.h" />
+    <ClInclude Include="src\KUNSBehavior\GlobalMapBuildingBehavior\GlobalMapBuilding.h" />
+    <ClInclude Include="src\KUNSBehavior\GotoGoalBehavior\GotoGoalBehavior.h" />
+    <ClInclude Include="src\KUNSBehavior\MapBuildingBehavior\MapBuildingBehavior.h" />
+    <ClInclude Include="src\KUNSBehavior\PathTeachingBehavior\PathTeachingBehavior.h" />
+    <ClInclude Include="src\KUNSGUI\BlockBox.h" />
+    <ClInclude Include="src\KUNSGUI\KuDrawingInfo.h" />
+    <ClInclude Include="src\KUNSGUI\KUNSUI3DDlg.h" />
+    <ClInclude Include="src\KUNSGUI\OwnImgListCtrl.h" />
+    <ClInclude Include="src\KUNSGUI\PointSettingDlg.h" />
+    <ClInclude Include="src\KUNSMap\KuMap.h" />
+    <ClInclude Include="src\KUNSMap\KuMapRepository.h" />
+    <ClInclude Include="src\KUNSMath\KuMath.h" />
+    <ClInclude Include="src\KUNSPose\KuPose.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\CheckPC.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\CheckSW.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\ControlUnit.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\datacnv.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\debug.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\Global.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\KuPRIMUSCommSupervisor.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\PRIMUSCommunication.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\PRIMUSVariable.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\sendqueue.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\SerialCom.h" />
+    <ClInclude Include="src\KUNSPRIMUSComm\serialdef.h" />
+    <ClInclude Include="src\KUNSProcess\ANSMotionController\ANSMotionController.h" />
+    <ClInclude Include="src\KUNSProcess\KuFiducialbasedLocalizerPr\KuFiducialbasedLocalizerPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSGlobalMapbasedGlobalLocalizationPr\KuGlobalMapbasedGlobalLocalizationPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSGlobalMapBuildingPr\KuGlobalMapBuildingPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSICPLocalizerPr\KuICPLocalizerPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSImageLineBasedParticleFilterLocalizerPr\KuILBPFLocalizerPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSKanayamaMotionControlPr\KuKanayamaMotionControlPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSLaserBasedParticleFilterLocalizerPr\KuLBPFLocalizerPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSLaserMapBuilderPr\KuLaserMapBuilderPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSLaserMapBuilderPr\KuMapBuilderParameter.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSPathBlockPr\KuPathBlockPlannerPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSPathBlockPr\KuPathBlockPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSPathPlannerPr\KuGradientPathPlannerPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSPathPlannerPr\KuPathSmoothing.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSRetinexPr\KuRetinexPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSScanMatchingLocalizerPr\KuScanMatchingLocalizerPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSSURFbasedGlobalLocalizerPr\KuSURFbasedGlobalLocalizerPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSTeachingPathPlannerPr\KuTeachingPathPlannerPr.h" />
+    <ClInclude Include="src\KUNSProcess\KUNSZoneControlPr\KuZoneControlPr.h" />
+    <ClInclude Include="src\KUNSUtil\KUNSCriticalSection\KuCriticalSection.h" />
+    <ClInclude Include="src\KUNSUtil\KUNSINIReadWriter\ini.h" />
+    <ClInclude Include="src\KUNSUtil\KUNSINIReadWriter\KuINIReadWriter.h" />
+    <ClInclude Include="src\KUNSUtil\KUNSSerialCommunication\KuSerialCommunication.h" />
+    <ClInclude Include="src\KUNSUtil\KUNSSerialComm\KuSerialComm.h" />
+    <ClInclude Include="src\KUNSUtil\KUNSSingletone\KuSingletone.h" />
+    <ClInclude Include="src\KUNSUtil\KUNSSmartPointer\KuSmartPointer.h" />
+    <ClInclude Include="src\KUNSUtil\KUNSSocketComm\KUNSSocketComm.h" />
+    <ClInclude Include="src\KUNSUtil\KUNSStandby\KuStandby.h" />
+    <ClInclude Include="src\KUNSUtil\KUNSThread\KuThread.h" />
+    <ClInclude Include="src\KUNSUtil\KUNSTimer\KuTimer.h" />
+    <ClInclude Include="src\KUNSUtil\KuUtil.h" />
+    <ClInclude Include="src\Localizer\GlobalLocalizerSupervisor.h" />
+    <ClInclude Include="src\Localizer\Localizer.h" />
+    <ClInclude Include="src\MobileSupervisor\KuCommandMessage.h" />
+    <ClInclude Include="src\MobileSupervisor\KuRobotParameter.h" />
+    <ClInclude Include="src\MobileSupervisor\MobileSupervisor.h" />
+    <ClInclude Include="src\MultiRobotSupervisor\Clientpart.h" />
+    <ClInclude Include="src\MultiRobotSupervisor\MultiRobotActuatorInterface.h" />
+    <ClInclude Include="src\MultiRobotSupervisor\MultiRobotSupervisor.h" />
+    <ClInclude Include="src\MultiRobotSupervisor\MultiTcpipInterface.h" />
+    <ClInclude Include="src\MultiRobotSupervisor\Serverpart.h" />
+    <ClInclude Include="src\MultiRobotSupervisor\tinyxml\tinyxml.h" />
+    <ClInclude Include="src\MultiRobotSupervisor\TotalTcpipCommunication.h" />
+    <ClInclude Include="src\MultiRobotSupervisor\XmldataSetting.h" />
+    <ClInclude Include="src\Sensor\E2BoxIMU9DOFInterface\E2BoxIMU9DOFInterface.h" />
+    <ClInclude Include="src\Sensor\GyroSensorInterface\GyroSensorInterface.h" />
+    <ClInclude Include="src\Sensor\GyroSensorInterface\GyroSerialComm.h" />
+    <ClInclude Include="src\Sensor\HokuyoURG04LXInterface\HokuyoURG04LXInterface.h" />
+    <ClInclude Include="src\Sensor\KinectSensorInterface\Kinect.h" />
+    <ClInclude Include="src\Sensor\KinectSensorInterface\KinectSensorInterface.h" />
+    <ClInclude Include="src\Sensor\Sensor.h" />
+    <ClInclude Include="src\Sensor\SensorSupervisor.h" />
+    <ClInclude Include="src\Sensor\SickLMS100Interface\SickLMS100Interface.h" />
+    <ClInclude Include="src\Sensor\SickLMS100Interface\SickLMS100\LMS100Comm.h" />
+    <ClInclude Include="src\Sensor\SickLMS100Interface\SickLMS100\LMSManager.h" />
+    <ClInclude Include="src\Sensor\SickLMS100Interface\SickLMS100\math_util.h" />
+    <ClInclude Include="src\Sensor\SickLMS100Interface\SickTIM551Interface.h" />
+    <ClInclude Include="src\Sensor\SiriusCameraInterface\KuSiriusCameraInterface.h" />
+    <ClInclude Include="src\Sensor\SVLaserScannerInterface\SVLaserScannerInterface.h" />
+    <ClInclude Include="src\Sensor\SVLaserScannerInterface\SVLaserScannerSerialComm.h" />
+    <ClInclude Include="src\Sensor\SwitchInterface\SwitchInterface.h" />
+    <ClInclude Include="src\Sensor\VirtualSensor\KuVrHokuyoURG04LXInterface.h" />
+    <ClInclude Include="src\Sensor\VirtualSensor\KuVrWheelActuatorInterface.h" />
+    <ClInclude Include="src\Sensor\WheelActuatorInterface\SSAGVWheelActuatorInterface.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Samsung_TapelessAGV.cpp" />
+    <ClCompile Include="Samsung_TapelessAGVDlg.cpp" />
+    <ClCompile Include="src\AGVComm\AGVCommSupervisor.cpp" />
+    <ClCompile Include="src\AGVComm\GPIOComm\GPIOComm.cpp" />
+    <ClCompile Include="src\AGVComm\ZigbeeComm\ZigbeeComm.cpp" />
+    <ClCompile Include="src\Algorithm\FeatureDetector\FDResult.cpp" />
+    <ClCompile Include="src\Algorithm\FeatureDetector\FeatureDetector.cpp" />
+    <ClCompile Include="src\Algorithm\FeatureDetector\freak.cpp" />
+    <ClCompile Include="src\Algorithm\FiducialMarkRecognizer\ALRecognizer.cpp" />
+    <ClCompile Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\FidtrackFinder.cpp" />
+    <ClCompile Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\fidtrackX.cpp" />
+    <ClCompile Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\FiducialObject.cpp" />
+    <ClCompile Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\FrameThresholder.cpp" />
+    <ClCompile Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\segment.cpp" />
+    <ClCompile Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\threshold.cpp" />
+    <ClCompile Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\tiled_bernsen_threshold.cpp" />
+    <ClCompile Include="src\Algorithm\FiducialMarkRecognizer\AL_Recognizer\treeidmap.cpp" />
+    <ClCompile Include="src\Algorithm\KuICP\KuICP.cpp" />
+    <ClCompile Include="src\Algorithm\LineDetector\LDResult.cpp" />
+    <ClCompile Include="src\Algorithm\ParticleFilter\CeilingImagebasedParticleFilter.cpp" />
+    <ClCompile Include="src\Algorithm\ParticleFilter\ImagebasedParticleFilter .cpp" />
+    <ClCompile Include="src\Algorithm\ParticleFilter\LaserBasedParticleFilter.cpp" />
+    <ClCompile Include="src\Algorithm\PathBlock\PathBlock.cpp" />
+    <ClCompile Include="src\ANSCommon\ANSCommon.cpp" />
+    <ClCompile Include="src\ANSCommon\ANSLog.cpp" />
+    <ClCompile Include="src\ANSCommon\ANSPoint2D.cpp" />
+    <ClCompile Include="src\ANSCommon\ANSPoint3D.cpp" />
+    <ClCompile Include="src\ANSCommon\ANSPose.cpp" />
+    <ClCompile Include="src\KUNSBehavior\GlobalLocalizationBehavior\GlobalLocalizationBehavior.cpp" />
+    <ClCompile Include="src\KUNSBehavior\GlobalMapBuildingBehavior\GlobalMapBuilding.cpp" />
+    <ClCompile Include="src\KUNSBehavior\GotoGoalBehavior\GotoGoalBehavior.cpp" />
+    <ClCompile Include="src\KUNSBehavior\MapBuildingBehavior\MapBuildingBehavior.cpp" />
+    <ClCompile Include="src\KUNSBehavior\PathTeachingBehavior\PathTeachingBehavior.cpp" />
+    <ClCompile Include="src\KUNSGUI\BlockBox.cpp" />
+    <ClCompile Include="src\KUNSGUI\KuDrawingInfo.cpp" />
+    <ClCompile Include="src\KUNSGUI\KUNSUI3DDlg.cpp" />
+    <ClCompile Include="src\KUNSGUI\OwnImgListCtrl.cpp" />
+    <ClCompile Include="src\KUNSGUI\PointSettingDlg.cpp" />
+    <ClCompile Include="src\KUNSMap\KuMap.cpp" />
+    <ClCompile Include="src\KUNSMap\KuMapRepository.cpp" />
+    <ClCompile Include="src\KUNSMath\KuMath.cpp" />
+    <ClCompile Include="src\KUNSPose\KuPose.cpp" />
+    <ClCompile Include="src\KUNSPRIMUSComm\CheckPC.cpp" />
+    <ClCompile Include="src\KUNSPRIMUSComm\CheckSW.cpp" />
+    <ClCompile Include="src\KUNSPRIMUSComm\ControlUnit.cpp" />
+    <ClCompile Include="src\KUNSPRIMUSComm\datacnv.cpp" />
+    <ClCompile Include="src\KUNSPRIMUSComm\debug.cpp" />
+    <ClCompile Include="src\KUNSPRIMUSComm\Global.cpp" />
+    <ClCompile Include="src\KUNSPRIMUSComm\KuPRIMUSCommSupervisor.cpp" />
+    <ClCompile Include="src\KUNSPRIMUSComm\PRIMUSCommunication.cpp" />
+    <ClCompile Include="src\KUNSPRIMUSComm\sendqueue.cpp" />
+    <ClCompile Include="src\KUNSPRIMUSComm\SerialCom.cpp" />
+    <ClCompile Include="src\KUNSPRIMUSComm\serialdef.cpp" />
+    <ClCompile Include="src\KUNSProcess\ANSMotionController\ANSMotionController.cpp" />
+    <ClCompile Include="src\KUNSProcess\KuFiducialbasedLocalizerPr\KuFiducialbasedLocalizerPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSGlobalMapbasedGlobalLocalizationPr\KuGlobalMapbasedGlobalLocalizationPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSGlobalMapBuildingPr\KuGlobalMapBuildingPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSICPLocalizerPr\KuICPLocalizerPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSImageLineBasedParticleFilterLocalizerPr\KuILBPFLocalizerPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSKanayamaMotionControlPr\KuKanayamaMotionControlPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSLaserBasedParticleFilterLocalizerPr\KuLBPFLocalizerPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSLaserMapBuilderPr\KuLaserMapBuilderPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSLaserMapBuilderPr\KuMapBuilderParameter.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSPathBlockPr\KuPathBlockPlannerPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSPathBlockPr\KuPathBlockPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSPathPlannerPr\KuGradientPathPlannerPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSPathPlannerPr\KuPathSmoothing.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSRetinexPr\KuRetinexPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSScanMatchingLocalizerPr\KuScanMatchingLocalizerPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSSURFbasedGlobalLocalizerPr\KuSURFbasedGlobalLocalizerPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSTeachingPathPlannerPr\KuTeachingPathPlannerPr.cpp" />
+    <ClCompile Include="src\KUNSProcess\KUNSZoneControlPr\KuZoneControlPr.cpp" />
+    <ClCompile Include="src\KUNSUtil\KUNSCriticalSection\KuCriticalSection.cpp" />
+    <ClCompile Include="src\KUNSUtil\KUNSINIReadWriter\ini.cpp" />
+    <ClCompile Include="src\KUNSUtil\KUNSINIReadWriter\KuINIReadWriter.cpp" />
+    <ClCompile Include="src\KUNSUtil\KUNSSerialCommunication\KuSerialCommunication.cpp" />
+    <ClCompile Include="src\KUNSUtil\KUNSSerialComm\KuSerialComm.cpp" />
+    <ClCompile Include="src\KUNSUtil\KUNSSocketComm\KUNSSocketComm.cpp" />
+    <ClCompile Include="src\KUNSUtil\KUNSStandby\KuStandby.cpp" />
+    <ClCompile Include="src\KUNSUtil\KUNSThread\KuThread.cpp" />
+    <ClCompile Include="src\KUNSUtil\KUNSTimer\KuTimer.cpp" />
+    <ClCompile Include="src\KUNSUtil\KuUtil.cpp" />
+    <ClCompile Include="src\Localizer\GlobalLocalizaerSupervisor.cpp" />
+    <ClCompile Include="src\MobileSupervisor\KuCommandMessage.cpp" />
+    <ClCompile Include="src\MobileSupervisor\KuRobotParameter.cpp" />
+    <ClCompile Include="src\MobileSupervisor\MobileSupervisor.cpp" />
+    <ClCompile Include="src\MultiRobotSupervisor\Clientpart.cpp" />
+    <ClCompile Include="src\MultiRobotSupervisor\MultiRobotActuatorInterface.cpp" />
+    <ClCompile Include="src\MultiRobotSupervisor\MultiRobotSupervisor.cpp" />
+    <ClCompile Include="src\MultiRobotSupervisor\MultiTcpipInterface.cpp" />
+    <ClCompile Include="src\MultiRobotSupervisor\Serverpart.cpp" />
+    <ClCompile Include="src\MultiRobotSupervisor\tinyxml\tinystr.cpp" />
+    <ClCompile Include="src\MultiRobotSupervisor\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="src\MultiRobotSupervisor\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="src\MultiRobotSupervisor\tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="src\MultiRobotSupervisor\TotalTcpipCommunication.cpp" />
+    <ClCompile Include="src\MultiRobotSupervisor\XmldataSetting.cpp" />
+    <ClCompile Include="src\Sensor\E2BoxIMU9DOFInterface\E2BoxIMU9DOFInterface.cpp" />
+    <ClCompile Include="src\Sensor\GyroSensorInterface\GyroSensorInterface.cpp" />
+    <ClCompile Include="src\Sensor\GyroSensorInterface\GyroSerialComm.cpp" />
+    <ClCompile Include="src\Sensor\HokuyoURG04LXInterface\HokuyoURG04LXInterface.cpp" />
+    <ClCompile Include="src\Sensor\KinectSensorInterface\Kinect.cpp" />
+    <ClCompile Include="src\Sensor\KinectSensorInterface\KinectSensorInterface.cpp" />
+    <ClCompile Include="src\Sensor\SensorSupervisor.cpp" />
+    <ClCompile Include="src\Sensor\SickLMS100Interface\SickLMS100Interface.cpp" />
+    <ClCompile Include="src\Sensor\SickLMS100Interface\SickLMS100\LMS100Comm.cpp" />
+    <ClCompile Include="src\Sensor\SickLMS100Interface\SickLMS100\LMSManager.cpp" />
+    <ClCompile Include="src\Sensor\SickLMS100Interface\SickLMS100\math_util.cpp" />
+    <ClCompile Include="src\Sensor\SickLMS100Interface\SickTIM551Interface.cpp" />
+    <ClCompile Include="src\Sensor\SiriusCameraInterface\KuSiriusCameraInterface.cpp" />
+    <ClCompile Include="src\Sensor\SVLaserScannerInterface\SVLaserScannerInterface.cpp" />
+    <ClCompile Include="src\Sensor\SVLaserScannerInterface\SVLaserScannerSerialComm.cpp" />
+    <ClCompile Include="src\Sensor\SwitchInterface\SwitchInterface.cpp" />
+    <ClCompile Include="src\Sensor\VirtualSensor\KuVrHokuyoURG04LXInterface.cpp" />
+    <ClCompile Include="src\Sensor\VirtualSensor\KuVrWheelActuatorInterface.cpp" />
+    <ClCompile Include="src\Sensor\WheelActuatorInterface\SSAGVWheelActuatorInterface.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Samsung_TapelessAGV.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Samsung_TapelessAGV.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

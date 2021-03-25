@@ -1,0 +1,22 @@
+﻿Build started 1/8/2015 11:13:35 AM.
+     1>Project "C:\atras_code\backup\[141226_2]Samsung_TapelessAGV\Samsung_TapelessAGV.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\Samsung_TapelessAGV.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         Samsung_TapelessAGV.vcxproj -> C:\atras_code\backup\[141226_2]Samsung_TapelessAGV\Release\Samsung_TapelessAGV.exe
+       Manifest:
+         All outputs are up-to-date.
+       FinalizeBuildStatus:
+         Deleting file "Release\Samsung_TapelessAGV.unsuccessfulbuild".
+         Touching "Release\Samsung_TapelessAGV.lastbuildstate".
+     1>Done Building Project "C:\atras_code\backup\[141226_2]Samsung_TapelessAGV\Samsung_TapelessAGV.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.29
